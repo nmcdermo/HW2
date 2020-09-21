@@ -14,8 +14,12 @@ int gcd(int a, int b)
 	return gcd(b, a % b);
 }
 
+//LCM using GCD
 int lcm(int a, int b)
 {
+	int x = gcd(a,b);
+	if(x>0)
+		return a*b/x
 	return 0;
 }
 
