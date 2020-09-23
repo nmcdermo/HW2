@@ -24,8 +24,16 @@ int lcm(int a, int b)
 	return 0;
 }
 
-int powermod(int a, int b){
-	return 0;
+int powermod(int a, int b, int r)
+{
+	int x=1;
+	while (b > 0) {
+		if (b % 2 == 1)
+			x = (x*a) % r;
+		b = b >> 1;
+		a = (a*a) % r;
+	}
+	return x;
 }
 
 /* 
